@@ -1,0 +1,8 @@
+<h2>File processed!</h3>
+<h3>Result:</h3>
+<ul>
+  {% for line in avaliation.result.splitlines %}
+    <li>{{ line }}</li>
+  {% endfor %}
+</ul>
+<button type="button" onclick="window.location.href='{% url 'overseer:index' %}'">Go Back</button>
