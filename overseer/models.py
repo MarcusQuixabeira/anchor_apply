@@ -23,7 +23,6 @@ class Avaliation(models.Model):
         lines = self.upload.read().splitlines()
 
         for line in lines:
-            print(line)
             if len(line) > 0:
                 data.append(line)
 
