@@ -31,11 +31,11 @@ class Avaliation(models.Model):
             first_line = int(data[0])
         except Exception as e:
              self.result = 'The N (first line) value must be a number'
-             return result
+             return self.result
 
         if first_line != (len(data) -1):
             self.result = 'The N (first line) value diverges from the card numbers found'
-            return result
+            return self.result
 
         data.remove(data[0])
 
