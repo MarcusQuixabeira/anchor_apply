@@ -13,7 +13,6 @@ enum34==1.0.4
 gunicorn==19.7.1
 ipaddress==1.0.16
 jsonschema==2.5.1
-pygobject==3.22.0
 PySocks==1.5.7
 pytz==2017.2
 PyYAML==3.11
