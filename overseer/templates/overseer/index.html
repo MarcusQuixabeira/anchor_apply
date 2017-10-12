@@ -1,8 +1,24 @@
-<h1>Welcome to Overseer</h1>
-<h3>Please submit the credit card file to my avaliation</h3>
+{% load staticfiles %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/overseer.css' %}">
+</head>
+<div class="container">
+  <div class="page-header">
+    <h1>Welcome to Overseer</h1>
+    <h4>Please submit the credit card file to my avaliation</h3>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form action="{% url 'overseer:process' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="id_upload" name="upload">
+        </div>
+        <button type="submit" class="btn btn-info">Process file</button>
+      </form>
+    </div>
+  </div>
 
-<form action="{% url 'overseer:process' %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input id="id_upload" type="file" name="upload" />
-    <input type="submit" value="Process file" />
-</form>
+</div>
