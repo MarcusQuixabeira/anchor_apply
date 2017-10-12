@@ -29,6 +29,13 @@ Access the application at http://localhost:8000 to validate a .txt file
 
 Access the application at http://localhost:8000/admin to check the admininistration area
 
+## Tests
+
+Run the following command to run the testcase:
+```
+$ python manage.py test overseer
+```
+
 ## Demo
 
 A demo can be accessed at:

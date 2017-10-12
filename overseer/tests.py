@@ -37,16 +37,16 @@ class AvaliationModelTests(TestCase):
             self.assertEqual(avaliation.process(), '4123-1233-3323-3422 [Invalid] \n')
 
     def test_processed_file_result_with_starter_digit_invalid(self):
-        with open('./overseer/tests/test08.txt', "r") as file_content:
+        with open('./overseer/tests/test07.txt', "r") as file_content:
             avaliation = Avaliation(upload=file_content)
             self.assertEqual(avaliation.process(), '1123-1233-3323-3422 [Invalid] \n')
 
     def test_processed_file_result_with_divergent_N_value(self):
-        with open('./overseer/tests/test09.txt', "r") as file_content:
+        with open('./overseer/tests/test08.txt', "r") as file_content:
             avaliation = Avaliation(upload=file_content)
             self.assertEqual(avaliation.process(), 'The N (first line) value diverges from the card numbers found')
 
     def test_processed_file_result_with_N_greater_than_99(self):
-        with open('./overseer/tests/test10.txt', "r") as file_content:
+        with open('./overseer/tests/test09.txt', "r") as file_content:
             avaliation = Avaliation(upload=file_content)
             self.assertEqual(avaliation.process(), 'N can\'t be greater than 100')
